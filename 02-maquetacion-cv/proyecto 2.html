@@ -2,22 +2,186 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Paisajes | Valeria Morales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografía Paisajes | Valeria Morales</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
     <style>
-        body { background-color: #f6f7f5; color: #3a0ca3; font-family: 'Montserrat', sans-serif; padding: 40px; }
-        h1 { font-family: 'Space Grotesk', sans-serif; border-bottom: 2px solid #480ca8; }
-        img { border-radius: 15px; border: 2px solid #480ca8; width: 100%; max-width: 800px; margin-bottom: 20px; }
-        .back-link { display: inline-block; margin-top: 30px; color: #480ca8; font-weight: bold; text-decoration: none; }
+        body {
+            background-color: #f6f7f5;
+            color: #3a0ca3;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        header {
+            border-bottom: 2px solid #480ca8;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .project-info {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .description {
+            flex: 2;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(58, 12, 163, 0.05);
+        }
+
+        .specs {
+            flex: 1;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(57, 0, 153, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px dashed #390099;
+        }
+
+        /* Galería Estilo Paisaje (Vertical stacking para impacto) */
+        .landscape-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .photo-card {
+            margin: 0;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid #480ca8;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.01);
+        }
+
+        figcaption {
+            margin-top: 15px;
+            font-style: italic;
+            font-size: 0.9em;
+            text-align: right;
+            opacity: 0.8;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            background-color: #390099;
+            color: white;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            border-radius: 8px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-back:hover {
+            background-color: #480ca8;
+            box-shadow: 0 5px 15px rgba(58, 12, 163, 0.3);
+        }
     </style>
 </head>
 <body>
-    <h1>02. Fotografía: Paisajes de Carmen</h1>
-    <p>Capturas enfocadas en la iluminación natural y la línea del horizonte de las playas locales.</p>
-    <img src="img/playa 2.JPG" alt="Playa 2">
-    <img src="img/playa 3.JPG" alt="Playa 3">
-    <img src="img/Proyecto 1.JPG" alt="Proyecto Paisaje">
-    <br>
-    <a href="index.html" class="back-link">← Volver al CV Principal</a>
+
+    <div class="breadcrumb">
+        <a href="index.html">INICIO</a> > 02_FOTOGRAFIA_PAISAJES
+    </div>
+
+    <header>
+        <h1>Paisajes de la Costa</h1>
+        <p>Documentación visual del litoral en Ciudad del Carmen.</p>
+    </header>
+
+    <main>
+        <div class="project-info">
+            <section class="description">
+                <h2>Concepto Visual</h2>
+                <p>
+                    Esta serie se centra en la captura de horizontes amplios y la interacción de la luz natural con el agua. 
+                    A través de la fotografía de paisaje, busco transmitir la serenidad del entorno costero de Campeche, 
+                    aplicando reglas de composición como el punto de fuga y la ley del horizonte.
+                </p>
+            </section>
+            
+            <aside class="specs">
+                <h3>METADATOS_DE_CAPTURA</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li>// EQUIPO: Cámara Digital</li>
+                    <li>// LOCACIÓN: Isla Aguada / Tour de Delfines</li>
+                    <li>// FORMATO: RAW / JPEG</li>
+                    <li>// POST: Corrección de color básica</li>
+                </ul>
+            </aside>
+        </div>
+
+        <div class="landscape-gallery">
+        <figure class="photo-card">
+
+                <img src="img/playa.jpeg"  alt="Navegar es dejar que el viento y el agua escriban tu propia historia">
+                <figcaption>Vista panorámica: Navegar es dejar que el viento y el agua escriban tu propia historia.</figcaption>
+            </figure>
+
+
+            <figure class="photo-card">
+                <img src="img/playa 2.jpeg"  alt="Siluetas que cuentan historias de mar y viento">
+                <figcaption>Vista panorámica: Siluetas que cuentan historias de mar y viento.</figcaption>
+            </figure>
+
+            <figure class="photo-card">
+                <img src="img/playa 3.JPG" alt="La garza custodia, el mar observa">
+                <figcaption>Composición de azules: La garza custodia, el mar observa.</figcaption>
+            </figure>
+
+            <figure class="photo-card">
+                <img src="img/delfin.jpeg"  alt="La naturaleza no necesita filtros, solo ojos que sepan admirarla">
+                <figcaption>Encuadre arquitectónico natural: La naturaleza no necesita filtros, solo ojos que sepan admirarla.</figcaption>
+            </figure>
+
+             <figure class="photo-card">
+                <img src="img/columpios.jpeg"  alt="Donde el tiempo se detiene y solo queda el vaivén del agua">
+                <figcaption>Encuadre arquitectónico natural: Donde el tiempo se detiene y solo queda el vaivén del agua.</figcaption>
+            </figure>
+        </div>
+
+        <a href="index.html" class="btn-back">← VOLVER AL CV</a>
+    </main>
+
+    <footer style="margin-top: 60px; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 0.8em; opacity: 0.5;">
+        // vpm_visual_archive // 2026 //
+    </footer>
+
 </body>
 </html>

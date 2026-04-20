@@ -2,22 +2,136 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naturaleza | Valeria Morales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
     <style>
-        body { background-color: #f6f7f5; color: #3a0ca3; font-family: 'Montserrat', sans-serif; padding: 40px; }
-        h1 { font-family: 'Space Grotesk', sans-serif; border-bottom: 2px solid #480ca8; }
-        img { border-radius: 15px; border: 2px solid #480ca8; width: 300px; margin: 10px; }
-        .back-link { display: inline-block; margin-top: 30px; color: #480ca8; font-weight: bold; text-decoration: none; }
+        body {
+            background-color: #f6f7f5;
+            color: #3a0ca3;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        header {
+            border-bottom: 2px solid #480ca8;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2em;
+        }
+
+        .breadcrumb {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo Masonry (Pinterest) */
+        .masonry-gallery {
+            column-count: 3; /* Número de columnas */
+            column-gap: 20px;
+            padding: 20px 0;
+        }
+
+        .masonry-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            break-inside: avoid; /* Evita que la foto se corte entre columnas */
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid #480ca8;
+            transition: all 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 15px rgba(58, 12, 163, 0.2);
+        }
+
+        .project-details {
+            font-family: 'JetBrains Mono', monospace;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #390099;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #390099;
+            color: white;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            border-radius: 8px;
+        }
+
+        /* Responsive para celulares */
+        @media (max-width: 768px) {
+            .masonry-gallery {
+                column-count: 2;
+            }
+        }
+        @media (max-width: 480px) {
+            .masonry-gallery {
+                column-count: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>03. Fotografía: Detalles Botánicos</h1>
-    <p>Estudio de color y contraste utilizando la flora de la región de Campeche.</p>
-    <img src="img/flor amarrilla.JPG" alt="Flor Individual">
-    <img src="img/flores amarrillas.JPG" alt="Grupo de Flores">
-    <img src="img/Proyecto 2.JPG" alt="Detalle Naturaleza">
-    <br>
-    <a href="index.html" class="back-link">← Volver al CV Principal</a>
+
+    <div class="breadcrumb">
+        <a href="index.html">INICIO</a> > 03_DETALLES_BOTANICOS
+    </div>
+
+    <header>
+        <h1>Exploración Botánica</h1>
+        <p>Estudio visual de la flora regional y macrofotografía.</p>
+    </header>
+
+    <main>
+        <div class="project-details">
+            > PROYECTO: Detalles Botánicos<br>
+            > OBJETIVO: Resaltar texturas y colores vibrantes.<br>
+            > TÉCNICA: Enfoque selectivo y Macro.
+        </div>
+
+        <div class="masonry-gallery">
+            <div class="masonry-item">
+                <img src="img/flor amarrilla.JPG" alt="Flor Amarilla Individual">
+            </div>
+            <div class="masonry-item">
+                <img src="img/flores amarrillas.JPG" alt="Conjunto de Flores">
+            </div>
+            <div class="masonry-item">
+                <img src="img/flores.jpeg" alt="Detalle Naturaleza">
+            </div>
+             <div class="masonry-item">
+                <img src="img/abeja.jpeg" alt="Detalle Naturaleza">
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-back">← REGRESAR AL CV</a>
+    </main>
+
+    <footer style="margin-top: 50px; text-align: center; opacity: 0.6; font-size: 0.8em;">
+        // Nature_Study_Archive // Valeria Cuevas
+    </footer>
+
 </body>
 </html>

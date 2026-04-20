@@ -2,21 +2,134 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logotipos | Valeria Morales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
     <style>
-        body { background-color: #f6f7f5; color: #3a0ca3; font-family: 'Montserrat', sans-serif; padding: 40px; }
-        h1 { font-family: 'Space Grotesk', sans-serif; border-bottom: 2px solid #480ca8; }
-        img { border-radius: 15px; border: 2px solid #480ca8; width: 300px; background: white; padding: 10px; }
-        .back-link { display: inline-block; margin-top: 30px; color: #480ca8; font-weight: bold; text-decoration: none; }
+        body {
+            background-color: #f6f7f5;
+            color: #3a0ca3;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        header {
+            border-bottom: 2px solid #480ca8;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2em;
+        }
+
+        .breadcrumb {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor de Logos Estilo Minimalista */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .logo-item {
+            background-color: #ffffff;
+            padding: 50px; /* Espacio alrededor del logo */
+            border-radius: 20px;
+            border: 1px solid rgba(58, 12, 163, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover {
+            box-shadow: 0 10px 30px rgba(58, 12, 163, 0.1);
+            transform: translateY(-5px);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            /* Filtro suave para que no compita con el fondo blanco */
+            filter: multiply; 
+        }
+
+        .brand-description {
+            max-width: 700px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .tech-list {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8em;
+            color: #480ca8;
+            margin-top: 15px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 12px 25px;
+            background-color: #390099;
+            color: white;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
-    <h1>04. Identidad Visual (Logos)</h1>
-    <p>Diseño de marcas minimalistas enfocadas en la legibilidad y el concepto visual.</p>
-    <img src="img/Logo M.jpg" alt="Logo M">
-    <img src="img/Logo N.jpg" alt="Logo N">
-    <br>
-    <a href="index.html" class="back-link">← Volver al CV Principal</a>
+
+    <div class="breadcrumb">
+        <a href="index.html">INICIO</a> > 04_IDENTIDAD_VISUAL
+    </div>
+
+    <header>
+        <h1>Diseño de Logotipos</h1>
+        <p>Conceptos visuales y construcción de marca.</p>
+    </header>
+
+    <main>
+        <div class="brand-description">
+            <p>
+                Desarrollo de identidades gráficas que buscan la síntesis visual. 
+                Cada logotipo ha sido diseñado bajo principios de geometría, legibilidad y 
+                adaptabilidad para diferentes medios digitales y tradicionales.
+            </p>
+            <div class="tech-list">
+                // SOFTWARE: Adobe Illustrator <br>
+                // PROCESO: Bocetaje análogo > Vectorización > Grid constructivo
+            </div>
+        </div>
+
+        <div class="logo-showcase">
+            <div class="logo-item">
+                <img src="img/Logo M.jpg" alt="Logo Letra M">
+            </div>
+            <div class="logo-item">
+                <img src="img/Logo N.jpg" alt="Logo Letra N">
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-back">← REGRESAR AL CV</a>
+    </main>
+
+    <footer style="margin-top: 60px; text-align: center; font-family: 'JetBrains Mono', monospace; opacity: 0.5;">
+        VALERIA_MORALES // BRANDING_PORTFOLIO_2026
+    </footer>
+
 </body>
 </html>
