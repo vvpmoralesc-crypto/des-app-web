@@ -3,111 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Valeria - Diseño Multimedia</title>
+    <title>Portafolio | Valeria Morales - Multimedia</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* Estilos Generales */
+        :root {
+            --primary: #3a0ca3;
+            --secondary: #480ca8;
+            --bg: #f6f7f5;
+            --white: #ffffff;
+            --text: #2b2d42;
+        }
+
         body {
-            background-color: #f6f7f5;
-            color: #3a0ca3; 
+            background-color: var(--bg);
+            color: var(--text); 
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 40px;
+            padding: 20px;
         }
 
-        h1, h2, h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            color: #390099; 
-            border-bottom: 1px solid #480ca8;
-            padding-bottom: 10px;
-            letter-spacing: -1px;
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 2.5em;
-            color: #3a0ca3;
-            border-bottom: none;
-            margin-bottom: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3em;
+            color: var(--primary);
+            margin: 10px 0;
+            letter-spacing: -2px;
         }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .foto-perfil:hover { transform: scale(1.05); }
 
         .tech-subtitle {
             font-family: 'JetBrains Mono', monospace;
-            color: #390099;
-            font-size: 0.9em;
-            margin-top: 5px;
+            color: var(--secondary);
+            font-weight: 700;
             display: block;
-        }
-
-        a {
-            color: #480ca8;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: #480ca8;
-            text-shadow: 0 0 8px #3a0ca3;
+            margin-bottom: 20px;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
-            gap: 20px;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
             font-family: 'Space Grotesk', sans-serif;
-            font-weight: 500;
-            font-size: 0.8em;
-            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: 0.3s;
         }
 
-        img {
-            border-radius: 12px;
-            border: 2px solid #480ca8;
-            margin: 5px;
-            transition: all 0.4s ease;
-            filter: grayscale(20%);
+        nav a:hover { color: var(--primary); }
+
+        /* Secciones */
+        section { margin-bottom: 50px; }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary);
+            border-left: 5px solid var(--primary);
+            padding-left: 15px;
+            margin-bottom: 25px;
         }
 
-        img:hover {
-            transform: translateY(-5px) scale(1.02);
-            filter: grayscale(0%);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        /* Columnas de Educación y Herramientas */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
 
-        aside {
-            background: rgba(255, 255, 255, 0.03);
+        .highlight { font-weight: 600; color: var(--primary); margin: 0; }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 0.9em;
+        }
+
+        /* Portafolio con Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        article {
+            background: var(--bg);
             padding: 20px;
             border-radius: 15px;
-            border-left: 4px solid #390099;
-            font-family: 'JetBrains Mono', monospace;
+            transition: 0.3s;
+            border: 1px solid transparent;
         }
 
-        aside h3 {
-            border-bottom: none;
-            font-size: 1.2em;
+        article:hover {
+            background: var(--white);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(58, 12, 163, 0.1);
+            transform: translateY(-5px);
+        }
+
+        article h3 { margin-top: 0; color: var(--primary); }
+
+        .project-imgs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .project-imgs img {
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        /* Contacto */
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8em;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover { background: var(--secondary); transform: scale(1.05); }
+
+        aside {
+            background: #f0f0ff;
+            padding: 25px;
+            border-radius: 15px;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         footer {
-            margin-top: 60px;
             text-align: center;
-            font-size: 0.8em;
-            color: #480ca8;
+            margin-top: 50px;
             font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .main-container { padding: 20px; }
+            h1 { font-size: 2em; }
         }
     </style>
 </head>
 <body>
 
+<div class="main-container">
     <header>
-        <h1>Valeria Paola Morales Cuevas</h1>
-        <div class="perfil-header">
-    <img src="img/foto de perfil .jpeg" width="120" alt="Valeria Paola Morales Cuevas" class="foto-perfil">
-</div>
+        <img src="img/foto de perfil .jpeg" alt="Valeria Morales" class="foto-perfil">
+        <h1>Valeria Morales</h1>
         <span class="tech-subtitle">> Ingeniera_en_Diseño_Multimedia</span>
         <nav>
             <ul>
@@ -118,149 +215,110 @@
         </nav>
     </header>
 
-     <section class="info-columns">
-            <div class="column">
-                <h2 class="col-title">Educación</h2>
-                <div class="info-item">
-                    <p class="highlight">Ingeniería en Diseño Multimedia</p>
-                    <p>UNACAR | 2023 — Presente</p>
-                </div>
-                <div class="info-item">
-                    <p class="highlight">Preparatoria</p>
-                    <p>Secundaria Y Preparatoria Benito Juárez | 2020 — 2023</p>
-                </div>
+    <section id="perfil">
+        <h2>Sobre mí</h2>
+        <p style="text-align: justify;">
+            Estudiante de <strong>Ingeniería en Diseño Multimedia</strong> con enfoque en desarrollo frontend y creación de contenido visual. Mi trabajo combina precisión técnica con sensibilidad artística en áreas como fotografía, modelado 3D e identidad visual.
+        </p>
+    </section>
+
+    <div class="info-grid">
+        <section>
+            <h2>Educación</h2>
+            <div style="margin-bottom: 20px;">
+                <p class="highlight">Ingeniería en Diseño Multimedia</p>
+                <small>UNACAR | 2023 — Presente</small>
             </div>
-    <main>
-        <section id="perfil">
-            <h2>Sobre mí</h2>
-            <p style="text-align: justify; max-width: 800px;">
-                Soy estudiante de <strong>Ingeniería en Diseño Multimedia</strong>. Con sólida base técnica en desarrollo frontend (HTML) 
-                y experiencia en la creación de contenido visual mediante fotografía, diseño digital y dibujo digital.
-                Apasionada por la intersección entre la tecnología y el arte.
-            </p>
+            <div>
+                <p class="highlight">Preparatoria Benito Juárez</p>
+                <small>2020 — 2023</small>
+            </div>
         </section>
 
-        <section id="portafolio">
-            <h2>Mi Portafolio</h2>
-            
+        <section>
+            <h2>Herramientas</h2>
+            <div class="tool-item"><img src="img/logo office.jpg" width="25"> Microsoft Office</div>
+            <div class="tool-item"><img src="img/logo blender.jpg" width="25"> Blender 3D</div>
+            <div class="tool-item"><img src="img/logo canva.jpg" width="25"> Canva Design</div>
+            <div class="tool-item"><img src="img/logo capcut.jpg" width="25"> CapCut Video Editor</div>
+        </section>
+    </div>
+
+    <section id="portafolio">
+        <h2>Portafolio</h2>
+        <div class="portfolio-grid">
             <article>
                 <h3>01. Dibujo Digital</h3>
-                <a href="proyecto1.html">
-                    <img src="img/dibujo flor.jpeg" width="120" alt="Dibujo Flor">
-                    <img src="img/dibujo hoja.jpeg" width="120" alt="Dibujo Hoja">
-                    <img src="img/Ilustración.jpg" width="120" alt="Ilustración Digital">
+                <p>Estudio de formas y color digital.</p>
+                <a href="proyecto1.html" class="project-imgs">
+                    <img src="img/dibujo flor.jpeg">
+                    <img src="img/dibujo hoja.jpeg">
+                    <img src="img/Ilustración.jpg">
                 </a>
             </article>
 
             <article>
-                <h3>02. Fotografía: Paisajes</h3>
-                <p>Capturas de la costa en Ciudad del Carmen.</p>
-                <a href="proyecto2.html">
-                    <img src="img/playa.jpeg" width="120" alt="Playa">
-                    <img src="img/playa 2.jpeg" width="120" alt="Playa">
-                    <img src="img/playa 3.JPG" width="120" alt="Playa">
-                    <img src="img/columpios.jpeg" width="150" alt="Columpios">
-                    <img src="img/delfin.jpeg" width="120" alt="Delfin">
+                <h3>02. Fotografía: Paisaje</h3>
+                <p>Exploración costera en Ciudad del Carmen.</p>
+                <a href="proyecto2.html" class="project-imgs">
+                    <img src="img/playa.jpeg">
+                    <img src="img/playa 2.jpeg">
+                    <img src="img/playa 3.JPG">
                 </a>
             </article>
 
             <article>
-                <h3>03. Fotografía: Naturaleza</h3>
-                <p>Detalles botánicos y macrofotografía.</p>
-                <a href="proyecto3.html">
-                    <img src="img/flor amarrilla.JPG" width="120" alt="Flor Amarilla">
-                    <img src="img/flores amarrillas.JPG" width="120" alt="Flores Amarillas">
-                    <img src="img/cactus.jpeg" width="120" alt="Cactus">
-                    <img src="img/flores.jpeg" width="120" alt="Flores">
-                    <img src="img/abeja.jpeg" width="120" alt="Abeja">
+                <h3>03. Fotografía: Natura</h3>
+                <p>Macro-detalles botánicos regionales.</p>
+                <a href="proyecto3.html" class="project-imgs">
+                    <img src="img/flor amarrilla.JPG">
+                    <img src="img/cactus.jpeg">
+                    <img src="img/abeja.jpeg">
                 </a>
             </article>
 
             <article>
-                <h3>04. Diseño de Logotipos</h3>
-                <p>Identidad visual y branding.</p>
-                <a href="proyecto4.html">
-                    <img src="img/Logo M.jpg" alt="Logo M" width="120">
-                    <img src="img/Logo N.jpg" alt="Logo N" width="120">
+                <h3>04. Branding</h3>
+                <p>Construcción de logos y marcas.</p>
+                <a href="proyecto4.html" class="project-imgs">
+                    <img src="img/Logo M.jpg">
+                    <img src="img/Logo N.jpg">
                 </a>
             </article>
 
             <article>
-                <h3>05. Diseño de Producto</h3>
-                <p>Packaging y etiquetas para ropa.</p>
-                <a href="proyecto5.html">
-                    <img src="img/Etiqueta para ropa.jpg" width="120" alt="Etiqueta 1">
-                    <img src="img/Etiqueta para ropa 1.jpg" width="120" alt="Etiqueta 2">
+                <h3>05. Producto</h3>
+                <p>Diseño de etiquetas y packaging.</p>
+                <a href="proyecto5.html" class="project-imgs">
+                    <img src="img/Etiqueta para ropa.jpg">
+                    <img src="img/Etiqueta para ropa 1.jpg">
                 </a>
             </article>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <ul style="list-style: none; padding: 0;">
-
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-            <div class="instagram-container">
-            <a href="https://instagram.com/vvalmxc" target="_blank" class="insta-link">
-            <i class="fab fa-instagram"></i> 
-            <span>vvalmxc</span>
-            </a>
-            <div class="contact-container">
-            <a href="mailto:vvpmoralesc@gmail.com" class="contact-link">
-            <i class="fas fa-envelope"></i> 
-            <span>vvpmoralesc@gmail.com</span>
-    </a>
-</div>
-            
-        </section>
-    </main>
-
-     <div class="column">
-                <h2 class="col-title">Herramientas</h2>
-                <div class="tool-item">
-                    <div class="tool-icon icono-lleno">
-                        <img src="img/logo office.jpg" width="30" alt="Paqueteria Microsoft Office">
-                    </div>
-                        <p>Paqutería Microsoft Office</p>
-                </div>
-
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <img src="img/logo blender.jpg" width="30" alt="Blender">
-                    </div>
-                         <p>Blender 3D</p>
-                </div>
-
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <img src="img/logo canva.jpg" width="30" alt="Canva">
-                    </div>
-                        <p>Canva</p>
-                </div>
-
-                <div class="tool-item">
-                    <div class="tool-icon">
-                        <img src="img/logo capcut.jpg" width="30" alt="CapCut">
-                    </div>
-                        <p>CapCut</p>
-                </div>
-            </div>
+        </div>
+    </section>
 
     <aside>
-        <h3>Habilidades Técnicas</h3>
-        <ul style="list-style: '// '; color: #480ca8;">
-            <li><span style="color: #3a0ca3;">HTML5 / CSS3</span></li>
-            <li><span style="color: #3a0ca3;">Modelado 3D</span></li>
-            <li><span style="color: #3a0ca3;">Animación 2D</span></li>
-            <li><span style="color: #3a0ca3;">Fotografía Digital</span></li>
-            <li><span style="color: #3a0ca3;">Inglés (En aprendizaje)</span></li>
+        <h3>Habilidades_Core</h3>
+        <ul style="list-style: '// '; padding-left: 20px;">
+            <li>HTML5 / CSS3 Avanzado</li>
+            <li>Modelado Orgánico 3D</li>
+            <li>Animación Digital 2D</li>
+            <li>Post-producción Fotográfica</li>
         </ul>
     </aside>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="contact-links">
+            <a href="https://instagram.com/vvalmxc" target="_blank"><i class="fab fa-instagram"></i> @vvalmxc</a>
+            <a href="mailto:vvpmoralesc@gmail.com"><i class="fas fa-envelope"></i> vvpmoralesc@gmail.com</a>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 // VALERIA MORALES // DESIGN_&_CODE</p>
     </footer>
+</div>
 
 </body>
 </html>
