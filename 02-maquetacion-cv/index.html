@@ -37,7 +37,6 @@
             border-radius: 20px;
         }
 
-        /* Header */
         header {
             text-align: center;
             border-bottom: 2px solid var(--bg);
@@ -91,7 +90,6 @@
 
         nav a:hover { color: var(--primary); }
 
-        /* Secciones */
         section { margin-bottom: 50px; }
 
         h2 {
@@ -102,7 +100,6 @@
             margin-bottom: 25px;
         }
 
-        /* Columnas de Educación y Herramientas */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -119,7 +116,6 @@
             font-size: 0.9em;
         }
 
-        /* Portafolio con Grid */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -132,6 +128,7 @@
             border-radius: 15px;
             transition: 0.3s;
             border: 1px solid transparent;
+            position: relative;
         }
 
         article:hover {
@@ -142,6 +139,13 @@
         }
 
         article h3 { margin-top: 0; color: var(--primary); }
+
+        /* Estilo para que todo el cuadro sea cliqueable */
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
 
         .project-imgs {
             display: flex;
@@ -158,7 +162,15 @@
             border: 1px solid #ddd;
         }
 
-        /* Contacto */
+        .view-project {
+            display: block;
+            margin-top: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75em;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
         .contact-links {
             display: flex;
             gap: 20px;
@@ -248,52 +260,70 @@
         <h2>Portafolio</h2>
         <div class="portfolio-grid">
             <article>
-                <h3>01. Dibujo Digital</h3>
-                <p>Estudio de formas y color digital.</p>
-                <a href="proyecto1.html" class="project-imgs">
-                    <img src="img/dibujo flor.jpeg">
-                    <img src="img/dibujo hoja.jpeg">
-                    <img src="img/Ilustración.jpg">
+                <a href="proyecto 1.html" class="project-link">
+                    <h3>01. Dibujo Digital</h3>
+                    <p>Estudio de formas y color digital.</p>
+                    <div class="project-imgs">
+                        <img src="img/dibujo flor.jpeg">
+                        <img src="img/dibujo hoja.jpeg">
+                        <img src="img/Ilustración.jpg">
+                    </div>
+                    <span class="view-project">VER DETALLES →</span>
+                    </a>
+            </article>
+
+            <article> 
+                <a href="proyecto 2.html" class="project-link"> 
+                    <h3>02. Fotografía: Paisaje</h3>
+                    <p>Exploración costera en Ciudad del Carmen.</p>
+                    <div class="project-imgs">
+                        <img src="img/playa.jpeg">
+                        <img src="img/playa 2.jpeg">
+                        <img src="img/playa 3.JPG">
+                    </div>
+                    <span class="view-project">VER DETALLES →</span>
+                 </a>
+            </article>
+    
+
+            <article>
+                <a href="proyecto 3.html" class="project-link">
+                    <h3>03. Fotografía: Natural</h3>
+                    <p>Macro-detalles botánicos regionales.</p>
+                    <div class="project-imgs">
+                        <img src="img/flor amarrilla.JPG">
+                        <img src="img/cactus.jpeg">
+                        <img src="img/abeja.jpeg">
+                    </div>
+                    <span class="view-project">VER DETALLES →</span>
                 </a>
             </article>
 
             <article>
-                <h3>02. Fotografía: Paisaje</h3>
-                <p>Exploración costera en Ciudad del Carmen.</p>
-                <a href="proyecto2.html" class="project-imgs">
-                    <img src="img/playa.jpeg">
-                    <img src="img/playa 2.jpeg">
-                    <img src="img/playa 3.JPG">
+                <a href="proyecto 4.html" class="project-link">
+                    <h3>04. Branding</h3>
+                    <p>Construcción de logos y marcas.</p>
+                    <div class="project-imgs">
+                        <img src="img/Logo M.jpg">
+                        <img src="img/Logo N.jpg">
+                        <img src="img/LOGO BRAILLE Y SEÑAS.jpg">
+                    </div>
+                    <span class="view-project">VER DETALLES →</span>
                 </a>
             </article>
 
             <article>
-                <h3>03. Fotografía: Natura</h3>
-                <p>Macro-detalles botánicos regionales.</p>
-                <a href="proyecto3.html" class="project-imgs">
-                    <img src="img/flor amarrilla.JPG">
-                    <img src="img/cactus.jpeg">
-                    <img src="img/abeja.jpeg">
+                <a href="proyecto 5.html" class="project-link">
+                    <h3>05. Producto</h3>
+                    <p>Diseño de etiquetas y packaging.</p>
+                    <div class="project-imgs">
+                        <img src="img/Etiqueta para ropa.jpg">
+                        <img src="img/Etiqueta para ropa 1.jpg">
+                    </div>
+                    <span class="view-project">VER DETALLES →</span>
                 </a>
             </article>
-
-            <article>
-                <h3>04. Branding</h3>
-                <p>Construcción de logos y marcas.</p>
-                <a href="proyecto4.html" class="project-imgs">
-                    <img src="img/Logo M.jpg">
-                    <img src="img/Logo N.jpg">
-                </a>
-            </article>
-
-            <article>
-                <h3>05. Producto</h3>
-                <p>Diseño de etiquetas y packaging.</p>
-                <a href="proyecto5.html" class="project-imgs">
-                    <img src="img/Etiqueta para ropa.jpg">
-                    <img src="img/Etiqueta para ropa 1.jpg">
-                </a>
-            </article>
+            
         </div>
     </section>
 
